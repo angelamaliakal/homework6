@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  background-color: #000;
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#container1 {
+    width: 600px;
+    height: 400px;
+    background-image: url("https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Manhattan__New_York_City.jpg?updated=1569536924");
+    background-size: contain;
+    display: none;
+}
+
+#container2 {
+    width: 600px;
+    height: 400px;
+    background-image: url("https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Provincetown_Inn_Pool__Cape_Cod.jpg?updated=1564612636");
+    background-size: contain;
+    display: none;
+}
+
+#container3 {
+    width: 600px;
+    height: 400px;
+    background-image: url("https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Day_Trip__Capri.jpg?updated=1557944694");
+    background-size: contain;
+    display: none;
+}
+
+#container4 {
+    width: 600px;
+    height: 400px;
+    background-image: url("https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Surfing_Waikiki.jpg?updated=1562876830");
+    background-size: contain;
+    display: none;
+}
+
+#container5 {
+	position: relative;
+    width: 600px;
+    height: 400px;
+    background-image: url("https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Loge_Peak__Aspen_Highlands.jpg?updated=1538167819");
+    background-size: contain;
+    display: none;
+}
+
+#overlay1 {
+  position: fixed;
+  display: none;
+  width: 125px;
+  height: 90px;
+  background-color: #000;
+}
+
+#overlay2 {
+  position: fixed;
+  display: none;
+  width: 125px;
+  height: 90px;
+  background-color: #000;
+}
+
+#overlay3 {
+  position: fixed;
+  display: none;
+  width: 125px;
+  height: 90px;
+  background-color: #000;
+}
+
+#overlay4 {
+  position: fixed;
+  display: none;
+  width: 125px;
+  height: 90px;
+  background-color: #000;
+}
+
+#overlay5 {
+  position: fixed;
+  display: none;
+  width: 125px;
+  height: 90px;
+  background-color: #000;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+</style>
+
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>My Favorite Works of Art</h2>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<!-- The four columns -->
+<div class="row">
+  <div id="div1" class="column">
+    <div id="overlay1" class="column" onmouseout="off1()">
+  <div id="text">"NYC By Bird", $1500</div>
+  </div>
+    <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Manhattan__New_York_City.jpg?updated=1569536924" alt="Nature" onclick="on1()" style="width:100%">
+  </div>
+
+  <div id="div2" class="column">
+  <div id="overlay2" class="column" onmouseout="off2()">
+  <div id="text">"Provincetown Pool", $1000</div>
+  </div>
+    <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Provincetown_Inn_Pool__Cape_Cod.jpg?updated=1564612636" alt="Snow" onclick="on2()" style="width:100%">
+  </div>
+
+  <div id="div3" class="column">
+  <div id="overlay3" class="column" onmouseout="off3()">
+  <div id="text">"Capri Boat", $4000</div>
+  </div>
+    <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Day_Trip__Capri.jpg?updated=1557944694" alt="Mountains" onclick="on3()" style="width:100%">
+  </div>
+
+  <div id="div4" class="column">
+  <div id="overlay4" class="column" onmouseout="off4()">
+  <div id="text">"Waikiki Beach Surf", $8000</div>
+  </div>
+    <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Surfing_Waikiki.jpg?updated=1562876830" alt="Lights" onclick="on4()" style="width:100%">
+  </div>
+
+  <div id="div5" class="column">
+  <div id="overlay5" class="column" onmouseout="off5()">
+  <div id="text">"Aspen Snow Mountain", $3000</div>
+  </div>
+    <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Loge_Peak__Aspen_Highlands.jpg?updated=1538167819" alt="Lights" onclick="on5()" style="width:100%">
+  </div>
+
+
+
+</div>
+
+<div id="container1" class="column"></div>
+<div id="container2" class="column"></div>
+<div id="container3" class="column"></div>
+<div id="container4" class="column"></div>
+<div id="container5" class="column"></div>
+
+<script>
+$(function() {
+$('#div1').hover(function() {
+    $('#container1').fadeIn();
+}, function() {
+    $('#container1').hide();
+});
+$('#div2').hover(function() {
+    $('#container2').fadeIn();
+}, function() {
+    $('#container2').hide();
+});
+$('#div3').hover(function() {
+    $('#container3').fadeIn();
+}, function() {
+    $('#container3').hide();
+});
+$('#div4').hover(function() {
+    $('#container4').fadeIn();
+}, function() {
+    $('#container4').hide();
+});
+$('#div5').hover(function() {
+    $('#container5').fadeIn();
+}, function() {
+    $('#container5').hide();
+});
+});
+</script>
+
+<script>
+$(document).ready(function() {
+$('#btn_click').on('click', function() {
+var url = 'index.php'; //please insert the url of the your current page here, we are assuming the url is 'index.php'         
+$('#div1-wrapper').load(url + ' #div1'); //note: the space before #div1 is very important
+});
+});
+</script>
+
+<script>
+function on1() {
+  document.getElementById("overlay1").style.display = "block";
+}
+
+setTimeout(function() {
+    $('#overlay1').fadeOut('fast');
+}, 5000);
+</script>
+
+<script>
+
+function on2() {
+  document.getElementById("overlay2").style.display = "block";
+}
+
+setTimeout(function() {
+    $('#overlay2').fadeOut('fast');
+}, 5000);
+</script>
+
+<script>
+function on3() {
+  document.getElementById("overlay3").style.display = "block";
+}
+
+setTimeout(function() {
+    $('#overlay3').fadeOut('fast');
+}, 5000);
+</script>
+
+<script>
+function on4() {
+  document.getElementById("overlay4").style.display = "block";
+}
+
+setTimeout(function() {
+    $('#overlay4').fadeOut('fast');
+}, 5000);
+</script>
+
+<script>
+function on5() {
+  document.getElementById("overlay5").style.display = "block";
+}
+
+setTimeout(function() {
+    $('#overlay5').fadeOut('fast');
+}, 5000);
+</script>
+
+
+</body>
+</html>
