@@ -125,14 +125,6 @@ body {
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
-
-.overlay {
-
-  position: relative;
-  width: 100%;
-  padding: 10px;
-  background-color: #000;
-}
 </style>
 
 </head>
@@ -150,35 +142,35 @@ body {
 <!-- The four columns -->
 <div class="row">
   <div id="div1" class="column">
-  <div id="overlay1" class="overlay" onmouseout="off1()">
+  <div id="overlay1" class="overlay">
   <div id="text">"NYC By Bird", $1500</div>
   </div>
     <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Manhattan__New_York_City.jpg?updated=1569536924" alt="Nature" onclick="on1()" style="width:100%">
   </div>
 
   <div id="div2" class="column">
-  <div id="overlay2" class="column" onmouseout="off2()">
+  <div id="overlay2" class="column">
   <div id="text">"Provincetown Pool", $1000</div>
   </div>
     <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Provincetown_Inn_Pool__Cape_Cod.jpg?updated=1564612636" alt="Snow" onclick="on2()" style="width:100%">
   </div>
 
   <div id="div3" class="column">
-  <div id="overlay3" class="column" onmouseout="off3()">
+  <div id="overlay3" class="column">
   <div id="text">"Capri Boat", $4000</div>
   </div>
     <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Day_Trip__Capri.jpg?updated=1557944694" alt="Mountains" onclick="on3()" style="width:100%">
   </div>
 
   <div id="div4" class="column">
-  <div id="overlay4" class="column" onmouseout="off4()">
+  <div id="overlay4" class="column">
   <div id="text">"Waikiki Beach Surf", $8000</div>
   </div>
     <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Surfing_Waikiki.jpg?updated=1562876830" alt="Lights" onclick="on4()" style="width:100%">
   </div>
 
   <div id="div5" class="column">
-  <div id="overlay5" class="column" onmouseout="off5()">
+  <div id="overlay5" class="column">
   <div id="text">"Aspen Snow Mountain", $3000</div>
   </div>
     <img src="https://res.cloudinary.com/gray-malin/image/upload/c_scale,w_1000,q_80/gray-malin/products/Loge_Peak__Aspen_Highlands.jpg?updated=1538167819" alt="Lights" onclick="on5()" style="width:100%">
@@ -228,44 +220,25 @@ $('#div5').hover(function() {
 function on1() {
   document.getElementById("overlay1").style.display = "block";
 }
-
-setTimeout(function() {
-    $('#overlay1').fadeOut('fast');
-}, 5000);
-
-
-
 function on2() {
   document.getElementById("overlay2").style.display = "block";
 }
-
-setTimeout(function() {
-    $('#overlay2').fadeOut('fast');
-}, 5000);
-
 function on3() {
   document.getElementById("overlay3").style.display = "block";
 }
-
-setTimeout(function() {
-    $('#overlay3').fadeOut('fast');
-}, 5000);
-
-
 function on4() {
   document.getElementById("overlay4").style.display = "block";
 }
-
-setTimeout(function() {
-    $('#overlay4').fadeOut('fast');
-}, 5000);
-
-
 function on5() {
   document.getElementById("overlay5").style.display = "block";
 }
-
+</script>
+<script>
 setTimeout(function() {
+    $('#overlay1').fadeOut('fast');
+    $('#overlay2').fadeOut('fast');
+    $('#overlay3').fadeOut('fast');
+    $('#overlay4').fadeOut('fast');
     $('#overlay5').fadeOut('fast');
 }, 5000);
 
